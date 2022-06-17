@@ -32,7 +32,10 @@ server.on("request", async (req, res) => {
             res.end();
         } else {
             res.writeHead(404, { 'Content-Type': 'application/json' });
-            res.write(JSON.stringify({ msg: 'The requested URL was not found' }))
+            res.write(JSON.stringify({
+                msg: 'The requested URL was not found',
+                code: 404
+            }))
             res.end();
         }
     }
@@ -40,7 +43,8 @@ server.on("request", async (req, res) => {
         console.error(err);
         res.writeHead(500, { 'Content-Type': 'application/json' });
         res.write(JSON.stringify({
-            msg: 'Encountered Server Error'
+            msg: 'Encountered Server Error',
+            code: 500
         }))
         res.end();
     }

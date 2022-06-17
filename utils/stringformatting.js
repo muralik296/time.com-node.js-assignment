@@ -1,5 +1,3 @@
-// helper - (ii)
-
 // Returns array containing substrings between consecutive array elements inthis case indices
 module.exports = async function(string) {
 
