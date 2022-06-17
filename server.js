@@ -52,4 +52,5 @@ server.on("request", async (req, res) => {
 
 server.listen(port, async () => {
     console.log(`Listening at port ${port}`);
+    console.log(`Visit http://localhost:${port}/getTimeStories`);
 })
